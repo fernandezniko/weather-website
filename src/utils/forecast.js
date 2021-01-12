@@ -32,7 +32,7 @@ const forecast = (lattitude, longitude, callback) => {
         else {
 
             callback(undefined,
-                response.body.weather[0].description + ' It is currently: ' + response.body.main.temp + ' degres, whit a ' + response.body.main.humidity + ' % of humidity'
+                response.body.weather[0].description + ', it is currently: ' + response.body.main.temp + ' °C, whit a ' + response.body.main.humidity + ' % of humidity. Tha max temperature for today is: ' + response.body.main.temp_max + '°C and the min temperature: ' + response.body.main.temp_min + ' °C'
             )
         }
 
