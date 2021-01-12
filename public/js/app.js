@@ -1,6 +1,3 @@
-//console.log('client side javascrip file')
-//fetch clien side javascrip // promises
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')

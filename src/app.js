@@ -5,7 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 //Defines paths for express configure
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -36,7 +36,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        helptxt: 'This is some helpful text',
+        helptxt: 'Insert the city name that you want to know about the real time forecast.',
         name: 'Nicolas Fernandez'
     })
 })
@@ -44,7 +44,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
-            error: 'You must provide an adrress'
+            error: 'You must provide the city name'
         })
     }
     //el 2do parametro de la callback de geocode lo paso como un objeto destructuring (antes era solo data) y
