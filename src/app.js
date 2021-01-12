@@ -1,4 +1,3 @@
-//nodemon src/app.js -e js,hbs
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
@@ -69,11 +68,10 @@ app.get('/weather', (req, res) => {
     })
 })
 
-//app.com/help/data
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'MR1',
+        name: 'Nicolas Fernandez',
         errorMsj: 'Article not found'
     })
 })
@@ -81,7 +79,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'DIDI',
+        name: 'Nicolas Fernandez',
         errorMsj: 'Page not found'
     })
 })

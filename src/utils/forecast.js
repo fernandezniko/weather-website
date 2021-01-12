@@ -17,7 +17,8 @@ const request = require('request')
 
 const forecast = (lattitude, longitude, callback) => {
 
-    const urlbycoordinates = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lattitude + '&lon=' + longitude + '&appid=1a45f6a8f57138f9e13398fbc6aba898&units=metric'
+    const openWeatherApiKey = process.env.OPENWEATHER_API_KEY
+    const urlbycoordinates = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lattitude + '&lon=' + longitude + '&appid=' + openWeatherApiKey + '&units=metric'
 
 
     request({ url: urlbycoordinates, json: true }, (error, response) => {
