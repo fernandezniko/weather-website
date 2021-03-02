@@ -15,5 +15,5 @@ Fue desarrollada utilizando
 
 ![alt text](https://github.com/fernandezniko/weather-website/blob/master/public/images/home.PNG?raw=true)
 
-La aplicacion se encuentra actualmente deployada en el siguiente link: 
+La aplicacion se encuentra actualmente en el siguiente link: 
 [Weather App](https://fernandez-weather-application.herokuapp.com/)
